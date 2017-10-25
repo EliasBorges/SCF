@@ -19,13 +19,21 @@ namespace SCF
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/js").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery-migrate-{version}.js",
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/jquery.validate.js",
+                "~/Scripts/jquery.validate.unobtrusive.js",
+                "~/Scripts/jquery.validate.unobtrusive-custom-for-bootstrap.js",
+                "~/Scripts/sidebar_menu.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                "~/Content/bootstrap.css",
+                "~/Content/body.css",
+                "~/Content/bootstrap-responsive.css",
+                "~/Content/bootstrap-mvc-validation.css",
+                "~/Content/startbootstrap-simple-sidebar.css"));
         }
     }
 }
