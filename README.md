@@ -11,9 +11,9 @@ Sistema visa automatizar e controlar uma funerária, aumentar o gerenciamento fi
 
  *  Ferramentas
 
-Visual Studio, GitHub, Selênio
+Visual Studio, GitHub, Selenium
 
 #### Cronograma
 
- *  Dia 30/10 - Cadastro de conveniados - Nesta tela será mantido os dados cadastrados dos conveniados.
+ *  Dia 30/10 - Cadastro de conveniados - Cadastro de conveniados - Nesta tela será feito a inserção de dados dos conveniados, permitindo o cliente cadastrar um conveniado.
  *  Dia 27/11 - Cadastro financeiros, cadastro de contratos, tela de login - Nesta entrega iremos disponibilizar ao usuário telas para controle financeiro, contratos e gerenciamento de login.
