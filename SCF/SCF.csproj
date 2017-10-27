@@ -250,11 +250,14 @@
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Shared\Details.cshtml" />
     <Content Include="Views\Shared\Create.cshtml" />
-    <Content Include="Views\Conveniados\ManterConveniado.cshtml" />
     <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
+    <Content Include="Views\Financeiro\ManterFluxoCaixa.cshtml" />
+    <Content Include="Views\Financeiro\Visualizar Conta Receber.cshtml" />
+    <Content Include="Views\Financeiro\Visualizar Conta Pagar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
