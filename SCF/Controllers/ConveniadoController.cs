@@ -6,22 +6,17 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class HomeController : Controller
+    public class ConveniadoController : Controller
     {
-        // GET: Home
+        // GET: Conveniado
         public ActionResult Index()
         {
             return View();
         }
 
-        public ViewResult About()
+        public ActionResult ManterConveniado()
         {
             return View();
-        }
-
-        public ViewResult Contact()
-        {
-            throw new NotImplementedException();
         }
     }
 }

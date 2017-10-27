@@ -152,6 +152,7 @@
     <Compile Include="BootstrapSupport\HtmlHelpers\Paging.cs" />
     <Compile Include="BootstrapSupport\ViewHelperExtensions.cs" />
     <Compile Include="Controllers\BootstrapBaseController.cs" />
+    <Compile Include="Controllers\ConveniadoController.cs" />
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -249,6 +250,8 @@
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Shared\Details.cshtml" />
     <Content Include="Views\Shared\Create.cshtml" />
+    <Content Include="Views\Conveniados\ManterConveniado.cshtml" />
+    <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
