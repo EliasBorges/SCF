@@ -1,0 +1,67 @@
+﻿@model SCF.Conveniado
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Conveniado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoConveniado.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoConveniado.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdConveniado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

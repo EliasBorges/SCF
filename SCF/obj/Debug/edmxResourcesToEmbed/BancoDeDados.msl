@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SCFModelStoreContainer" CdmEntityContainer="SCFEntities">
+    <EntitySetMapping Name="Cidade">
+      <EntityTypeMapping TypeName="SCFModel.Cidade">
+        <MappingFragment StoreEntitySet="Cidade">
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IdUf" ColumnName="IdUf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="SCFModel.Contrato">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+          <ScalarProperty Name="IdConveniado" ColumnName="IdConveniado" />
+          <ScalarProperty Name="IdTipoContrato" ColumnName="IdTipoContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conveniado">
+      <EntityTypeMapping TypeName="SCFModel.Conveniado">
+        <MappingFragment StoreEntitySet="Conveniado">
+          <ScalarProperty Name="IdConveniado" ColumnName="IdConveniado" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="IdTipoConveniado" ColumnName="IdTipoConveniado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="SCFModel.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+          <ScalarProperty Name="IdTipoLogradouro" ColumnName="IdTipoLogradouro" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financeiro">
+      <EntityTypeMapping TypeName="SCFModel.Financeiro">
+        <MappingFragment StoreEntitySet="Financeiro">
+          <ScalarProperty Name="IdFinanceiro" ColumnName="IdFinanceiro" />
+          <ScalarProperty Name="IdConveniado" ColumnName="IdConveniado" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="DataVencimento" ColumnName="DataVencimento" />
+          <ScalarProperty Name="DataPagamento" ColumnName="DataPagamento" />
+          <ScalarProperty Name="ValorPago" ColumnName="ValorPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoContrato">
+      <EntityTypeMapping TypeName="SCFModel.TipoContrato">
+        <MappingFragment StoreEntitySet="TipoContrato">
+          <ScalarProperty Name="IdTipoContrato" ColumnName="IdTipoContrato" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoConveniado">
+      <EntityTypeMapping TypeName="SCFModel.TipoConveniado">
+        <MappingFragment StoreEntitySet="TipoConveniado">
+          <ScalarProperty Name="IdTipoConveniado" ColumnName="IdTipoConveniado" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoLogradouro">
+      <EntityTypeMapping TypeName="SCFModel.TipoLogradouro">
+        <MappingFragment StoreEntitySet="TipoLogradouro">
+          <ScalarProperty Name="IdTipoLogradouro" ColumnName="IdTipoLogradouro" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uf">
+      <EntityTypeMapping TypeName="SCFModel.Uf">
+        <MappingFragment StoreEntitySet="Uf">
+          <ScalarProperty Name="IdUf" ColumnName="IdUf" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
