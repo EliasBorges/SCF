@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/assec.ico" rel="icon">
+    @*<link href="~/assec.ico" rel="icon">*@
     <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
     <script charset="utf-8">
         var baseUrl = '@string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))';
@@ -19,7 +19,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
                 <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
             </button>
-            <a class="navbar-brand" href="~/Home/Index" style="color: #0a416c;"><i class="fa fa-users"></i> ASSEC</a>
+            <a class="navbar-brand" href="~/Home/Index" style="color: #0a416c;"><i class="fa fa-users"></i> SCF</a>
         </div>
     </nav>
 
@@ -27,125 +27,82 @@
         <div id="sidebar-wrapper" class="no-print">
             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cog fa-stack-1x"></i></span><strong>Cadastros Gerais</strong></a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-hospital-o fa-stack-1x "></i></span><strong>Controle de Conveniados</strong></a>
                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="~/Cidade/ManterCidade">Nova Cidade</a></li>
-                        <li><a href="~/Cidade/Index">Busca Cidades</a></li>
-                        <li><a href="~/Departamento/ManterDepartamento">Novo Departamento</a></li>
-                        <li><a href="~/Departamento/Index">Busca Departamentos</a></li>
-                        <li><a href="~/Especialidade/ManterEspecialidade">Nova Especialidade</a></li>
-                        <li><a href="~/Especialidade/Index">Busca Especialidades</a></li>
-                        <li><a href="~/Funcao/ManterFuncao">Nova Função</a></li>
-                        <li><a href="~/Funcao/Index">Busca Funções</a></li>
-                        <li><a href="~/Procedimento/ManterProcedimento">Novo Procedimento</a></li>
-                        <li><a href="~/Procedimento/Index">Busca Procedimentos</a></li>
+                        <li><a href="~/Conveniado/ManterConveniado">Cadastrar Conveniado</a></li>
                     </ul>
-                </li>@* /\ Controle Gerais                      *@
-                @*<li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-calendar-plus-o fa-stack-1x "></i></span><strong>Controle de Agendamentos</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="/Agendamento/ManterAgendamento">Novo Agendamento</a></li>
-                            <li><a href="/Agendamento/Index">Buscar Agendamentos</a></li>
-                        </ul>
-                    </li>*@@* /\ Controle de Agendamentos      *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user  fa-stack-1x "></i></span><strong>Controle de Associados</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/Associado/ManterAssociado">Novo Associado</a></li>
-                            <li><a href="~/Associado/Index">Buscar Associados</a></li>
-                        </ul>
-                    </li>@* /\ Controle de Associados        *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-users  fa-stack-1x "></i></span><strong>Controle de Dependentes</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/Dependente/ManterDependente">Novos Dependentes</a></li>
-                            <li><a href="~/Dependente/Index">Buscar Dependentes</a></li>
-                        </ul>
-                    </li>@* /\ Controle de Dependentes       *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span><strong>Controle de Gestores</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/Gestor/ManterGestor">Novo Gestor</a></li>
-                            <li><a href="~/Gestor/Index">Buscar Gestores</a></li>
-                        </ul>
-                    </li>@* /\ Controle de Gestores          *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-hospital-o fa-stack-1x "></i></span><strong>Controle de Hospitais</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/Hospital/ManterHospital">Novo Hospital</a></li>
-                            <li><a href="~/Hospital/Index">Buscar Hospitais</a></li>
-                        </ul>
-                    </li>@* /\ Controle de Hospitais         *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-md fa-stack-1x "></i></span><strong>Controle de Médicos</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/Medico/ManterMedico">Novo Médico</a></li>
-                            <li><a href="~/Medico/Index">Buscar Médicos</a></li>
-                        </ul>
-                    </li>@* /\ Controle de Médicos           *@
-                    <li>
-                        <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-usd fa-stack-1x "></i></span><strong>Controle de Convênio</strong></a>
-                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                            <li><a href="~/LancamentoConvenio/ManterLancamentoConvenio">Novo Lançamento</a></li>
-                            <li><a href="~/LancamentoConvenio/ConfirmarLancamento">Confirmar Lançamentos</a></li>
-                            @*<li><a href="~/LancamentoConvenio/Index">Buscar Lançamento</a></li>*@
-                        </ul>
-                    </li>@* /\ Controle de Médicos           *@
-                    @*<li>
-                            <a href="/ContaCorrente/Relatorios/"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-text fa-stack-1x "></i></span><strong>Relatórios</strong></a>
-                        </li>*@@* /\ Controle de Relatórios        *@
+                </li>@* /\ Controle de Conveniados         *@
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money  fa-stack-1x "></i></span><strong>Controle Financeiro</strong></a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="~/Financeiro/ManterFluxoCaixa">Cadastrar Fluxo de Caixa</a></li>
+                        <li><a href="~/Financeiro/VisualizarContaPagar">Visualizar Contas a Pagar</a></li>
+                        <li><a href="~/Financeiro/VisualizarContaReceber">Visualizar Conta a Receber</a></li>
                     </ul>
-                </div>
+                </li>@* /\ Controle de Financeiro         *@
 
-                <div id="page-content-wrapper" style="min-height: 420px;">
-                    <div class="container-fluid">
-                        <div class="xyz">
-                            @Html.Partial("_alerts")
-                            @Html.Partial("_validationSummary")
-                            @RenderBody()
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-hospital-o fa-stack-1x "></i></span><strong>Controle de Login</strong></a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="~/Login/ManterLogin">Cadastrar Login</a></li>
+                    </ul>
+                </li>@* /\ Controle de Login         *@
 
-                            <footer class="no-print">
-                                <hr>
-                                <div class="container-fluid xyz">
-                                    <div class="row" style="padding-left: inherit">
-                                        <p>&copy; BWKM Soluções @System.DateTime.Now.ToString("yyyy")</p>
-                                    </div>
-                                </div>
-                            </footer>
+            </ul>
+        </div>
+    </div>
+
+
+        <div id="page-content-wrapper" style="min-height: 420px;">
+            <div class="container-fluid">
+                <div class="xyz">
+                    @Html.Partial("_alerts")
+                    @Html.Partial("_validationSummary")
+                    @RenderBody()
+
+                    <footer class="no-print">
+                        <hr>
+                        <div class="container-fluid xyz">
+                            <div class="row" style="padding-left: inherit">
+                                <p>&copy; SCF @System.DateTime.Now.ToString("yyyy")</p>
+                            </div>
                         </div>
-                    </div>
+                    </footer>
                 </div>
             </div>
+        </div>
 
-            <section hidden>
-                @RenderSection("AjaxForms", required: false)
-            </section>
+        <section hidden>
+            @RenderSection("AjaxForms", required: false)
+        </section>
 
-            @Scripts.Render("~/js")
-            @RenderSection("Scripts", required: false)
-
-
+        @Scripts.Render("~/js")
+        @RenderSection("Scripts", required: false)
 
 
-            <script charset="utf-8">
-                var selector = '.nav li';
 
-                $(selector).on('click', function () {
-                    $(selector).removeClass('active');
-                    $(this).addClass('active');
-                });
-            </script>
 
-            <script type='text/javascript'>
-                var appInsights = window.appInsights || function (config) {
-                    function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
-                    var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;) r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
-                }({
-                    instrumentationKey: 'b1075867-38c6-4e98-8820-4d3365bb0809'
-                });
+        <script charset="utf-8">
+            var selector = '.nav li';
 
-                window.appInsights = appInsights;
-                appInsights.trackPageView();
-            </script>
-        </body>
-    </html>
+            $(selector).on('click', function () {
+                $(selector).removeClass('active');
+                $(this).addClass('active');
+            });
+        </script>
+
+        <script type='text/javascript'>
+            var appInsights = window.appInsights || function (config) {
+                function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+                var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;) r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
+            }({
+                instrumentationKey: 'b1075867-38c6-4e98-8820-4d3365bb0809'
+            });
+
+            window.appInsights = appInsights;
+            appInsights.trackPageView();
+        </script>
+</body>
+
+</html>

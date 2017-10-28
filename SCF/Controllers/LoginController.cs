@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class ManterLoginController : Controller
+    public class LoginController : Controller
     {
-        // GET: ManterLogin
+        // GET: Login
         public ActionResult Index()
         {
             return View();

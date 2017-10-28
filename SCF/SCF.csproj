@@ -17,7 +17,7 @@
     <AssemblyName>SCF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -155,32 +155,12 @@
     <Compile Include="App_Start\ExampleLayoutsRouteConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BancoDeDados.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BancoDeDados.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BancoDeDados.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
-    </Compile>
     <Compile Include="BootstrapSupport\ControlGroupExtensions.cs" />
     <Compile Include="BootstrapSupport\HtmlHelpers\GlyphIcons.cs" />
     <Compile Include="BootstrapSupport\HtmlHelpers\Paging.cs" />
     <Compile Include="BootstrapSupport\ViewHelperExtensions.cs" />
-    <Compile Include="Cidade.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Contrato.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\BootstrapBaseController.cs" />
+    <Compile Include="Controllers\ConveniadoController.cs" />
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
     <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -197,16 +177,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BancoDeDados.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BancoDeDados.Context.cs</LastGenOutput>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
-    </Content>
-    <Content Include="BancoDeDados.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
-      <LastGenOutput>BancoDeDados.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\body.css" />
     <Content Include="Content\bootstrap-mvc-validation.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -240,13 +210,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\html5shiv.js" />
-    <EntityDeploy Include="BancoDeDados.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BancoDeDados.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="BancoDeDados.edmx.diagram">
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
@@ -297,7 +260,7 @@
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Shared\Details.cshtml" />
     <Content Include="Views\Shared\Create.cshtml" />
-    <Content Include="Views\Conveniadoes\ManterConveniado.cshtml" />
+    <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
     <Content Include="Views\Financeiro\ManterFluxoCaixa.cshtml" />
     <Content Include="Views\Financeiro\VisualizarContaReceber.cshtml" />
     <Content Include="Views\Financeiro\VisualizarContaPagar.cshtml" />
@@ -305,7 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ManterLogin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -328,7 +290,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58446</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58446/</IISUrl>
+          <IISUrl>http://localhost/SCF</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
