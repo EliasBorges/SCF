@@ -6,20 +6,25 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class HomeController : Controller
+    public class FinanceiroController : Controller
     {
-        // GET: Home
+        // GET: Financeiro
         public ActionResult Index()
         {
             return View();
         }
 
-        public ViewResult About()
+        public ActionResult ManterFluxoCaixa()
         {
             return View();
         }
 
-        public ViewResult Contact()
+        public ActionResult VisualizarContaPagar()
+        {
+            return View();
+        }
+
+        public ActionResult VisualizarContaReceber()
         {
             return View();
         }

@@ -154,6 +154,7 @@
     <Compile Include="Controllers\BootstrapBaseController.cs" />
     <Compile Include="Controllers\ConveniadoController.cs" />
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
+    <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,12 +253,12 @@
     <Content Include="Views\Shared\Create.cshtml" />
     <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
     <Content Include="Views\Financeiro\ManterFluxoCaixa.cshtml" />
-    <Content Include="Views\Financeiro\Visualizar Conta Receber.cshtml" />
-    <Content Include="Views\Financeiro\Visualizar Conta Pagar.cshtml" />
+    <Content Include="Views\Financeiro\VisualizarContaReceber.cshtml" />
+    <Content Include="Views\Financeiro\VisualizarContaPagar.cshtml" />
+    <Content Include="Views\Login\ManterLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
