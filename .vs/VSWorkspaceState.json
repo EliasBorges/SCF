@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SCF",
+    "\\SCF\\Views\\Conveniado"
   ],
+  "SelectedNode": "\\SCF\\BancoDeDados.edmx",
   "PreviewInSolutionExplorer": false
 }

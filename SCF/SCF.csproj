@@ -181,7 +181,6 @@
       <DependentUpon>BancoDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BootstrapBaseController.cs" />
-    <Compile Include="Controllers\ConveniadoController.cs" />
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
     <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -217,7 +216,7 @@
     <Compile Include="Uf.cs">
       <DependentUpon>BancoDeDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="Views\Conveniado\ConveniadoesController.cs" />
+    <Compile Include="Controllers\ConveniadoesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BancoDeDados.Context.tt">
@@ -320,7 +319,7 @@
     <Content Include="Views\Shared\Index.cshtml" />
     <Content Include="Views\Shared\Details.cshtml" />
     <Content Include="Views\Shared\Create.cshtml" />
-    <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
+    <Content Include="Views\Conveniadoes\ManterConveniado.cshtml" />
     <Content Include="Views\Financeiro\ManterFluxoCaixa.cshtml" />
     <Content Include="Views\Financeiro\VisualizarContaReceber.cshtml" />
     <Content Include="Views\Financeiro\VisualizarContaPagar.cshtml" />
