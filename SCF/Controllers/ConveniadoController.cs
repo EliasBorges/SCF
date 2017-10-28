@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BootstrapMvcSample.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,7 +7,7 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class ConveniadoController : Controller
+    public class ConveniadoController : BootstrapBaseController
     {
         // GET: Conveniado
         public ActionResult Index()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BootstrapMvcSample.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,9 +7,9 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class ManterLoginController : Controller
+    public class LoginController : BootstrapBaseController
     {
-        // GET: ManterLogin
+        // GET: Login
         public ActionResult Index()
         {
             return View();
