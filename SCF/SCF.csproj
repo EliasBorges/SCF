@@ -17,7 +17,7 @@
     <AssemblyName>SCF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -184,15 +184,6 @@
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
     <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Conveniado.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Endereco.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Financeiro.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,19 +195,6 @@
     <Compile Include="NavigationRoutes\NavigationRouteConfigurationExtensions.cs" />
     <Compile Include="NavigationRoutes\NavigationRouteFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoContrato.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoConveniado.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoLogradouro.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Uf.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\ConveniadoesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BancoDeDados.Context.tt">
@@ -324,11 +302,6 @@
     <Content Include="Views\Financeiro\VisualizarContaReceber.cshtml" />
     <Content Include="Views\Financeiro\VisualizarContaPagar.cshtml" />
     <Content Include="Views\Login\ManterLogin.cshtml" />
-    <Content Include="Views\Conveniadoes\Create.cshtml" />
-    <Content Include="Views\Conveniadoes\Delete.cshtml" />
-    <Content Include="Views\Conveniadoes\Details.cshtml" />
-    <Content Include="Views\Conveniadoes\Edit.cshtml" />
-    <Content Include="Views\Conveniadoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -336,9 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -358,7 +328,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58446</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SCF</IISUrl>
+          <IISUrl>http://localhost:58446/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

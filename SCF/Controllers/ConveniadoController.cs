@@ -1,5 +1,4 @@
-﻿using BootstrapMvcSample.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,15 +6,15 @@ using System.Web.Mvc;
 
 namespace SCF.Controllers
 {
-    public class LoginController : BootstrapBaseController
+    public class ConveniadoController : Controller
     {
-        // GET: Login
+        // GET: Conveniado
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ManterLogin()
+        public ActionResult ManterConveniado()
         {
             return View();
         }
