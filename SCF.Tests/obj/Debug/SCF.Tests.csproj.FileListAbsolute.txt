@@ -138,3 +138,7 @@ D:\Repositorio\Outros\SCF\SCF.Tests\obj\Debug\SCF.Tests.csprojResolveAssemblyRef
 D:\Repositorio\Outros\SCF\SCF.Tests\obj\Debug\SCF.Tests.csproj.CoreCompileInputs.cache
 D:\Repositorio\Outros\SCF\SCF.Tests\obj\Debug\SCF.Tests.dll
 D:\Repositorio\Outros\SCF\SCF.Tests\obj\Debug\SCF.Tests.pdb
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\EntityFramework.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\EntityFramework.xml
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\EntityFramework.SqlServer.xml

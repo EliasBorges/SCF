@@ -1,4 +1,4 @@
-﻿@model SCF.Conveniado
+﻿@model SCF.Models.Conveniado
 
 @{
     ViewBag.Title = "Delete";
@@ -13,11 +13,59 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
+            @Html.DisplayNameFor(model => model.Nome)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Descricao)
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAdmissao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAdmissao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logradouro)
         </dd>
 
         <dt>
@@ -45,19 +93,67 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Endereco.Descricao)
+            @Html.DisplayNameFor(model => model.CEP)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Endereco.Descricao)
+            @Html.DisplayFor(model => model.CEP)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TipoConveniado.Descricao)
+            @Html.DisplayNameFor(model => model.Cidade)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TipoConveniado.Descricao)
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelResidencial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelResidencial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelCelular1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelCelular1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCivil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCivil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoConveniado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoConveniado)
         </dd>
 
     </dl>

@@ -155,3 +155,4 @@ D:\Repositorio\Outros\SCF\SCF\bin\EntityFramework.dll
 D:\Repositorio\Outros\SCF\SCF\bin\EntityFramework.SqlServer.dll
 D:\Repositorio\Outros\SCF\SCF\bin\EntityFramework.xml
 D:\Repositorio\Outros\SCF\SCF\bin\EntityFramework.SqlServer.xml
+D:\Repositorio\Outros\SCF\SCF\obj\Debug\SCF.csprojResolveAssemblyReference.cache
