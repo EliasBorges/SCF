@@ -1,15 +1,17 @@
 ﻿@model SCF.Models.Conveniado
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Deletar Conveniado";
     Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
 }
 
-<h2>Delete</h2>
+@*<h2>Deletar</h2>*@
 
-<h3>Are you sure you want to delete this?</h3>
+
 <div>
-    <h4>Conveniado</h4>
+    <h3>Excluir Conveniado</h3>
+
+    <h3>Você tem certeza que deseja deletar este conveniado?</h3>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -162,8 +164,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index")
         </div>
     }
 </div>

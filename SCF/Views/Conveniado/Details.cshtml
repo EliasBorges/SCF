@@ -1,14 +1,14 @@
 ﻿@model SCF.Models.Conveniado
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Visualizar Conveniado";
     Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
 }
 
-<h2>Details</h2>
+@*<h2>Details</h2>*@
 
 <div>
-    <h4>Conveniado</h4>
+    <h3>Visualizar Conveniado</h3>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -158,6 +158,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
 </p>
