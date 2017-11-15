@@ -6,49 +6,77 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SCF;
 using SCF.Controllers;
+using SCF.Models;
+using NSubstitute;
+using SCF.BancoDados;
 
 namespace SCF.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
+        public ConveniadoController controller;
+        public Conveniado conveniado;
+        //private ConveniadoController mock;
+        private SCFContext db = new SCFContext();
 
         [TestMethod]
-        public void About()
+        public void TesteValidaCPF()
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            bool esperado = true;
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+            var conveniado = new Conveniado
+            {
+                CPF = "06442894657"
+            };
+            
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
 
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            var teste = mock.ValidaCPF(conveniado.CPF);
+
+            Assert.AreEqual(esperado, teste);
         }
+        
+        //[TestMethod]
+        //public void Index()                                     
+        //{
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //    try
+        //    {
+        //        controller.Create(conveniado);
+        //        Assert.IsTrue(true);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Assert.IsTrue(false);
+        //    }
+        //}
 
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+        //[TestMethod]
+        //public void About()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Assert
-            Assert.IsNotNull(result);
-        }
+        //    // Act
+        //    ViewResult result = controller.About() as ViewResult;
+
+        //    // Assert
+        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        //}
+
+        //[TestMethod]
+        //public void Contact()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
+
+        //    // Act
+        //    ViewResult result = controller.Contact() as ViewResult;
+
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
     }
 }
