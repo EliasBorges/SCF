@@ -37,21 +37,22 @@ namespace SCF.Tests.Controllers
 
             Assert.AreEqual(esperado, teste);
         }
-        
-        //[TestMethod]
-        //public void Index()                                     
-        //{
 
-        //    try
-        //    {
-        //        controller.Create(conveniado);
-        //        Assert.IsTrue(true);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Assert.IsTrue(false);
-        //    }
-        //}
+        [TestMethod]
+        public void ViewManterConveniado()
+        {
+            try { 
+            ConveniadoController index = new ConveniadoController();
+            ViewResult result = index.Index() as ViewResult;
+            Assert.IsNotNull(result);
+            }
+            catch(Exception ex)
+            {
+                ConveniadoController index = new ConveniadoController();
+                ViewResult result = index.Index() as ViewResult;
+                Assert.IsNull(result);
+            }
+        }
 
         //[TestMethod]
         //public void About()

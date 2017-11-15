@@ -175,3 +175,4 @@ D:\Repositorio\Outros\SCF\SCF\bin\Castle.Core.dll
 D:\Repositorio\Outros\SCF\SCF\bin\NSubstitute.dll
 D:\Repositorio\Outros\SCF\SCF\bin\System.Threading.Tasks.Extensions.dll
 D:\Repositorio\Outros\SCF\SCF\bin\System.Threading.Tasks.Extensions.xml
+D:\Repositorio\Outros\SCF\SCF\obj\Debug\SCF.csprojResolveAssemblyReference.cache
