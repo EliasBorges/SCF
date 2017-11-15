@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,7 @@ namespace SCF.Models
         public string Nome { get; set; }
         public string Matricula { get; set; }
 
+        [Required]
         public string CPF { get; set; }
         public string RG { get; set; }
 

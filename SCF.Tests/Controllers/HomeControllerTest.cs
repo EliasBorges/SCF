@@ -18,61 +18,65 @@ namespace SCF.Tests.Controllers
 
         public ConveniadoController controller;
         public Conveniado conveniado;
-        private ConveniadoController mock;
+        //private ConveniadoController mock;
+        private SCFContext db = new SCFContext();
 
-
-        public HomeControllerTest()
+        [TestMethod]
+        public void TesteValidaCPF()
         {
-            conveniado = new Conveniado
+            bool esperado = true;
+
+            var conveniado1 = new Conveniado
             {
-                Id = 123
-            
+                CPF = "06442894657"
             };
+            
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
 
-            mock = Substitute.ForPartsOf<ConveniadoController>();
+            var teste = mock.ValidaCPF(conveniado1.CPF);
 
-            mock.Create(conveniado);
+            Assert.AreEqual(esperado, teste);
         }
         
-        [TestMethod]
-        public void Index()                                     
-        {
+        //[TestMethod]
+        //public void Index()                                     
+        //{
 
-            try
-            {
-                controller.Create(conveniado);
-                Assert.IsTrue(true);
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(false);
-            }
-        }
+        //    try
+        //    {
+        //        controller.Create(conveniado);
+        //        Assert.IsTrue(true);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Assert.IsTrue(false);
+        //    }
+        //}
 
-        [TestMethod]
-        public void About()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //[TestMethod]
+        //public void About()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+        //    // Act
+        //    ViewResult result = controller.About() as ViewResult;
 
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
+        //    // Assert
+        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        //}
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //[TestMethod]
+        //public void Contact()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+        //    // Act
+        //    ViewResult result = controller.Contact() as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
-        }
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
     }
 }

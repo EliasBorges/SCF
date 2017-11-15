@@ -153,3 +153,10 @@ C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\EntityFramework.SqlServer.xm
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\NSubstitute.dll
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\NSubstituteAutoMocker.dll
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\NSubstitute.xml
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\xunit.runner.utility.net452.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\xunit.abstractions.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\NSubstitute.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\NSubstituteAutoMocker.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\NSubstitute.xml
