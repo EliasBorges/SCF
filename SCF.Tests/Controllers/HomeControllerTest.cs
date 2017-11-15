@@ -26,14 +26,14 @@ namespace SCF.Tests.Controllers
         {
             bool esperado = true;
 
-            var conveniado1 = new Conveniado
+            var conveniado = new Conveniado
             {
                 CPF = "06442894657"
             };
             
             var mock = Substitute.ForPartsOf<ConveniadoController>();
 
-            var teste = mock.ValidaCPF(conveniado1.CPF);
+            var teste = mock.ValidaCPF(conveniado.CPF);
 
             Assert.AreEqual(esperado, teste);
         }

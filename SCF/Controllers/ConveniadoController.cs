@@ -54,7 +54,7 @@ namespace SCF.Controllers
         {
             try
             {
-                if (Validacoes.ValidaCPF(conveniado.CPF))
+                if (ValidaCPF(conveniado.CPF))
                 {
                     if (ModelState.IsValid)
                     {
@@ -156,7 +156,7 @@ namespace SCF.Controllers
         
         #region Validações
 
-        public static bool ValidaCPF(string vrCPF)
+        public bool ValidaCPF(string vrCPF)
         {
             string valor = vrCPF.Replace(".", "");
             valor = valor.Replace("-", "");
