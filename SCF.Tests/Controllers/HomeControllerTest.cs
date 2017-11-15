@@ -6,23 +6,47 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SCF;
 using SCF.Controllers;
+using SCF.Models;
+using NSubstitute;
+using SCF.BancoDados;
 
 namespace SCF.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
+
+        public ConveniadoController controller;
+        public Conveniado conveniado;
+        private ConveniadoController mock;
+
+
+        public HomeControllerTest()
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            conveniado = new Conveniado
+            {
+                Id = 123
+            
+            };
 
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
+            mock = Substitute.ForPartsOf<ConveniadoController>();
 
-            // Assert
-            Assert.IsNotNull(result);
+            mock.Create(conveniado);
+        }
+        
+        [TestMethod]
+        public void Index()                                     
+        {
+
+            try
+            {
+                controller.Create(conveniado);
+                Assert.IsTrue(true);
+            }
+            catch (Exception ex)
+            {
+                Assert.IsTrue(false);
+            }
         }
 
         [TestMethod]

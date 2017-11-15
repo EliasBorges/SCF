@@ -57,14 +57,18 @@ namespace SCF.Controllers
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
+                else
+                    return View("Create", conveniado);
+
             }
             catch (DataException /* dex */)
             {
                 //Log the error (uncomment dex variable name and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
-            }
 
-            return View(conveniado);
+
+                return View("Create", conveniado);
+            }
         }
 
         // GET: Conveniado/Edit/5
