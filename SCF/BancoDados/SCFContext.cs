@@ -11,6 +11,7 @@ namespace SCF.BancoDados
     public class SCFContext : DbContext
     {
         public DbSet<Conveniado> Conveniado { get; set; }
+        public DbSet<Cadastro> Cadastro { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
