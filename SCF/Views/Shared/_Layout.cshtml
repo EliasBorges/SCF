@@ -1,0 +1,108 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<link href="~/assec.ico" rel="icon">*@
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
+    <script charset="utf-8">
+        var baseUrl = '@string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))';
+    </script>
+    @RenderSection("featured", required: false)
+</head>
+
+<body>
+    <nav class="navbar navbar-default no-margin">
+        <div class="navbar-header fixed-brand">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
+                <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            </button>
+            <a class="navbar-brand" href="~/Home/Index" style="color: #0a416c;"><i class="fa fa-users"></i> SCF</a>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div id="sidebar-wrapper" class="no-print">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-hospital-o fa-stack-1x "></i></span><strong>Controle de Conveniados</strong></a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="~/Conveniado/ManterConveniado">Cadastrar Conveniado</a></li>
+                    </ul>
+                </li>@* /\ Controle de Conveniados         *@
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-money  fa-stack-1x "></i></span><strong>Controle Financeiro</strong></a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="~/Financeiro/ManterFluxoCaixa">Cadastrar Fluxo de Caixa</a></li>
+                        <li><a href="~/Financeiro/VisualizarContaPagar">Visualizar Contas a Pagar</a></li>
+                        <li><a href="~/Financeiro/VisualizarContaReceber">Visualizar Conta a Receber</a></li>
+                    </ul>
+                </li>@* /\ Controle de Financeiro         *@
+
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-hospital-o fa-stack-1x "></i></span><strong>Controle de Login</strong></a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="~/Login/ManterLogin">Cadastrar Login</a></li>
+                    </ul>
+                </li>@* /\ Controle de Login         *@
+
+            </ul>
+        </div>
+    </div>
+
+
+        <div id="page-content-wrapper" style="min-height: 420px;">
+            <div class="container-fluid">
+                <div class="xyz">
+                    @Html.Partial("_alerts")
+                    @Html.Partial("_validationSummary")
+                    @RenderBody()
+
+                    <footer class="no-print">
+                        <hr>
+                        <div class="container-fluid xyz">
+                            <div class="row" style="padding-left: inherit">
+                                <p>&copy; SCF @System.DateTime.Now.ToString("yyyy")</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <section hidden>
+            @RenderSection("AjaxForms", required: false)
+        </section>
+
+        @Scripts.Render("~/js")
+        @RenderSection("Scripts", required: false)
+
+
+
+
+        <script charset="utf-8">
+            var selector = '.nav li';
+
+            $(selector).on('click', function () {
+                $(selector).removeClass('active');
+                $(this).addClass('active');
+            });
+        </script>
+
+        <script type='text/javascript'>
+            var appInsights = window.appInsights || function (config) {
+                function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+                var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;) r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
+            }({
+                instrumentationKey: 'b1075867-38c6-4e98-8820-4d3365bb0809'
+            });
+
+            window.appInsights = appInsights;
+            appInsights.trackPageView();
+        </script>
+</body>
+
+</html>
