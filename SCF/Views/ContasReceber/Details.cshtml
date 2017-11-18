@@ -1,0 +1,67 @@
+﻿@model SCF.Models.ContasReceber
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContasReceber</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Desdobramento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desdobramento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConveniadoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConveniadoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataVencimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPagamento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContasReceberId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SCF.Models.ContasReceber>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Desdobramento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConveniadoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPagamento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desdobramento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConveniadoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataVencimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPagamento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContasReceberId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContasReceberId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContasReceberId })
+        </td>
+    </tr>
+}
+
+</table>

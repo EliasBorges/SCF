@@ -172,14 +172,14 @@
     <Compile Include="BootstrapSupport\HtmlHelpers\Paging.cs" />
     <Compile Include="BootstrapSupport\ViewHelperExtensions.cs" />
     <Compile Include="Controllers\BootstrapBaseController.cs" />
+    <Compile Include="Controllers\ContasReceberController.cs" />
     <Compile Include="Controllers\ConveniadoController.cs" />
     <Compile Include="Controllers\ExampleLayoutsController.cs" />
-    <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContasReceber.cs" />
     <Compile Include="Models\Conveniado.cs" />
     <Compile Include="Models\HomeInputModel.cs" />
     <Compile Include="NavigationRoutes\INavigationRouteFilter.cs" />
@@ -276,15 +276,17 @@
     <Content Include="Views\Shared\Details.cshtml" />
     <Content Include="Views\Shared\Create.cshtml" />
     <Content Include="Views\Conveniado\ManterConveniado.cshtml" />
-    <Content Include="Views\Financeiro\ManterFluxoCaixa.cshtml" />
-    <Content Include="Views\Financeiro\VisualizarContaReceber.cshtml" />
-    <Content Include="Views\Financeiro\VisualizarContaPagar.cshtml" />
     <Content Include="Views\Login\ManterLogin.cshtml" />
     <Content Include="Views\Conveniado\Create.cshtml" />
     <Content Include="Views\Conveniado\Delete.cshtml" />
     <Content Include="Views\Conveniado\Details.cshtml" />
     <Content Include="Views\Conveniado\Edit.cshtml" />
     <Content Include="Views\Conveniado\Index.cshtml" />
+    <Content Include="Views\ContasReceber\Create.cshtml" />
+    <Content Include="Views\ContasReceber\Delete.cshtml" />
+    <Content Include="Views\ContasReceber\Details.cshtml" />
+    <Content Include="Views\ContasReceber\Edit.cshtml" />
+    <Content Include="Views\ContasReceber\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
