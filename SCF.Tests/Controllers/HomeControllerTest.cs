@@ -48,7 +48,46 @@ namespace SCF.Tests.Controllers
             
         }
 
+        #endregion
 
+
+        #region TesteValidaIdade
+        [TestMethod]
+
+        public void TesteValidaIdade()
+        {
+
+        }
+
+        #endregion
+
+        #region TesteValidaContinuaDependente
+        [TestMethod]
+
+        public void TesteValidaContinuaDependente()
+        {
+
+        }
+
+        #endregion
+
+        #region TesteValidaContaReceberAberto
+        [TestMethod]
+
+        public void TesteValidaContaReceberAberto()
+        {
+
+        }
+
+        #endregion
+
+        #region TesteValidaContaReceberPago
+        [TestMethod]
+
+        public void TesteValidaContaReceberPago()
+        {
+
+        }
 
         #endregion
 
