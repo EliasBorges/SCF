@@ -107,6 +107,22 @@ namespace SCF.Tests.Controllers
         //    }
         //}
 
+        [TestMethod]
+        public void ViewManterConveniado()
+        {
+            try { 
+            ConveniadoController index = new ConveniadoController();
+            ViewResult result = index.Index() as ViewResult;
+            Assert.IsNotNull(result);
+            }
+            catch(Exception ex)
+            {
+                ConveniadoController index = new ConveniadoController();
+                ViewResult result = index.Index() as ViewResult;
+                Assert.IsNull(result);
+            }
+        }
+
         //[TestMethod]
         //public void About()
         //{
