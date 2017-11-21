@@ -33,11 +33,16 @@ namespace SCF.Models
         public string Email { get; set; }
 
         //TODO: Criar entidade para Estado Civil (Solteiro e Casado)
-        public string EstadoCivil { get; set; }
+        public int EstadoCivil { get; set; }
 
         public string Observacao { get; set; }
 
         //TODO: Criar entidade para Tipo de Conveniado (Titular e Dependente)
-        public string TipoConveniado { get; set; }
+        public int TipoConveniado { get; set; }
+
+        public Conveniado()
+        {
+            DataAdmissao = DateTime.Now.Date;
+        }
     }
 }
