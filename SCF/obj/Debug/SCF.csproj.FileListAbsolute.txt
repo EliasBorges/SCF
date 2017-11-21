@@ -43,7 +43,6 @@ C:\Users\bwkbr\source\repos\SCF\SCF\bin\pt-br\System.Web.Razor.resources.dll
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\bwkbr\source\repos\SCF\SCF\obj\Debug\SCF.csprojResolveAssemblyReference.cache
 C:\Users\bwkbr\source\repos\SCF\SCF\obj\Debug\SCF.csproj.CoreCompileInputs.cache
 C:\Users\bwkbr\source\repos\SCF\SCF\obj\Debug\SCF.dll
 C:\Users\bwkbr\source\repos\SCF\SCF\obj\Debug\SCF.pdb

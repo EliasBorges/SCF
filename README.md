@@ -16,4 +16,4 @@ Visual Studio, GitHub, Selenium
 #### Cronograma
 
  *  Dia 30/10 - Cadastro de conveniados - Cadastro de conveniados - Nesta tela será feito a inserção de dados dos conveniados, permitindo o cliente cadastrar um conveniado.
- *  Dia 27/11 - Cadastro financeiros, cadastro de contratos, tela de login - Nesta entrega iremos disponibilizar ao usuário telas para controle financeiro, contratos e gerenciamento de login.
+ *  Dia 27/11 - Cadastro financeiros - Nesta entrega iremos disponibilizar ao usuário telas para controle financeiro
