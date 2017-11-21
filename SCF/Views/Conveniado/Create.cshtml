@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Novo Conveniado";
     Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
+    var selectEstadoCivil = new[] { new SelectListItem() { Text = "Solteiro(a)", Value = "1" }, new SelectListItem() { Text = "Casado(a)", Value = "2" }, new SelectListItem() { Text = "Divorciado(a)", Value = "3" } };
+    var selectTipoConveniado = new[] { new SelectListItem() { Text = "Titular", Value = "1" }, new SelectListItem() { Text = "Dependente", Value = "2" } };
 }
 
 @*<h2></h2>*@
@@ -30,13 +32,13 @@
 
             <div class="col-md-2">
                 @Html.LabelFor(model => model.DataAdmissao, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.DataAdmissao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.DataAdmissao, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.DataAdmissao, "", new { @class = "text-danger" })
             </div>
 
             <div class="col-md-2">
                 @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -51,14 +53,12 @@
             <div class="col-md-4">
                 @Html.LabelFor(model => model.RG, htmlAttributes: new { @class = "control-label col-md-0" })
                 @Html.EditorFor(model => model.RG, new { htmlAttributes = new { @class = "form-control" } })
-
-                @Html.DropDownList(Model.)
                 @Html.ValidationMessageFor(model => model.RG, "", new { @class = "text-danger" })
             </div>
 
             <div class="col-md-2">
-                @Html.LabelFor(model => model.EstadoCivil, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.EstadoCivil, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.EstadoCivil, new { @class = "control-label col-md-0", @for = "tipoEstadoCivil" })
+                @Html.DropDownListFor(model => model.EstadoCivil, selectEstadoCivil, "Selecione o Estado Civil", new { @id = "tipo-estadoCivil", @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EstadoCivil, "", new { @class = "text-danger" })
             </div>
 
@@ -72,16 +72,15 @@
         <div class="form-group">
             <div class="col-md-2">
                 @Html.LabelFor(model => model.TelCelular1, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.TelCelular1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TelCelular1, new { htmlAttributes = new { @id = "conveniado-telCelular1", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TelCelular1, "", new { @class = "text-danger" })
             </div>
-            
+
             <div class="col-md-2">
-                @Html.LabelFor(model => model.TipoConveniado, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.TipoConveniado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.TipoConveniado, new { @class = "control-label col-md-0", @for = "tipoAssociado" })
+                @Html.DropDownListFor(model => model.TipoConveniado, selectTipoConveniado, "Selecione o Tipo Conveniado", new { @id = "tipo-conveniado", @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.TipoConveniado, "", new { @class = "text-danger" })
             </div>
-
             <div class="col-md-4">
                 @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-0" })
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
@@ -94,7 +93,7 @@
                 @Html.ValidationMessageFor(model => model.Logradouro, "", new { @class = "text-danger" })
             </div>
 
-           
+
         </div>
 
         <div class="form-group">
@@ -146,6 +145,36 @@
     </div>
 }
 
+
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.maskedinput.js"></script>
+    <script src="~/Scripts/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script type="text/javascript">
+        $('#conveniado-telResidencial1').focusout(function () {
+            var phone, element;
+            element = $(this);
+            element.unmask();
+            phone = element.val().replace(/\D/g, '');
+            if (phone.length > 10) {
+                element.mask("(99) 9999-9999", { autoclear: false });
+            } else {
+                element.mask("(99) 9999-9999", { autoclear: false });
+            }
+        }).trigger('focusout');
+
+        $('#conveniado-telCelular1').focusout(function () {
+            var phone, element;
+            element = $(this);
+            element.unmask();
+            phone = element.val().replace(/\D/g, '');
+            if (phone.length > 10) {
+                element.mask("(99) 99999-999?9", { autoclear: false });
+            } else {
+                element.mask("(99) 9999-9999?9", { autoclear: false });
+            }
+        }).trigger('focusout');
+
+    </script>
 }
