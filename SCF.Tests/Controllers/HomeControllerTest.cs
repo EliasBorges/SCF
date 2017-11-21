@@ -21,6 +21,7 @@ namespace SCF.Tests.Controllers
         //private ConveniadoController mock;
         private SCFContext db = new SCFContext();
 
+        #region TesteValidaCPF
         [TestMethod]
         public void TesteValidaCPF()
         {
@@ -30,14 +31,28 @@ namespace SCF.Tests.Controllers
             {
                 CPF = "06442894657"
             };
-            
+
             var mock = Substitute.ForPartsOf<ConveniadoController>();
 
             var teste = mock.ValidaCPF(conveniado.CPF);
 
             Assert.AreEqual(esperado, teste);
         }
-        
+        #endregion
+
+        #region TesteInclusao
+        [TestMethod]
+
+        public void TesteInclusao()
+        {
+            
+        }
+
+
+
+        #endregion
+
+
         //[TestMethod]
         //public void Index()                                     
         //{
