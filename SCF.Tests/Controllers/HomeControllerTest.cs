@@ -61,15 +61,36 @@ namespace SCF.Tests.Controllers
 
         #endregion
 
-        #region TesteValidaContinuaDependente
+        #region TesteValidaContinuaDependenteMaior18NaoEstudante
         [TestMethod]
 
-        public void TesteValidaContinuaDependente()
+        public void TesteValidaContinuaDependenteMaior18NaoEstudante()
         {
 
         }
 
         #endregion
+
+        #region TesteValidaContinuaDependenteMaior18Estudante
+        [TestMethod]
+
+        public void TesteValidaContinuaDependenteMaior18Estudante()
+        {
+
+        }
+
+        #endregion
+
+        #region TesteValidaContinuaDependenteMaior24Estudante
+        [TestMethod]
+
+        public void TesteValidaContinuaDependenteMaior24Estudante()
+        {
+
+        }
+
+        #endregion
+
 
         #region TesteValidaContaReceberAberto
         [TestMethod]

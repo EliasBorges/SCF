@@ -113,3 +113,4 @@ C:\Users\bwkbr\source\repos\SCF\SCF\bin\System.Threading.Tasks.Extensions.dll
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\EntityFramework.xml
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\EntityFramework.SqlServer.xml
 C:\Users\bwkbr\source\repos\SCF\SCF\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\bwkbr\source\repos\SCF\SCF\obj\Debug\SCF.csprojResolveAssemblyReference.cache
