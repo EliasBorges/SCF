@@ -21,36 +21,6 @@ namespace SCF.Tests.Controllers
         //private ConveniadoController mock;
         private SCFContext db = new SCFContext();
 
-        #region TesteValidaCPF
-        [TestMethod]
-        public void TesteValidaCPF()
-        {
-            bool esperado = true;
-
-            var conveniado = new Conveniado
-            {
-                CPF = "06442894657"
-            };
-
-            var mock = Substitute.ForPartsOf<ConveniadoController>();
-
-            var teste = mock.ValidaCPF(conveniado.CPF);
-
-            Assert.AreEqual(esperado, teste);
-        }
-        #endregion
-
-        #region TesteInclusao
-        [TestMethod]
-
-        public void TesteInclusao()
-        {
-            
-        }
-
-        #endregion
-
-
         #region TesteValidaIdade
         [TestMethod]
 
@@ -70,27 +40,6 @@ namespace SCF.Tests.Controllers
         }
 
         #endregion
-
-        #region TesteValidaContinuaDependenteMaior18Estudante
-        [TestMethod]
-
-        public void TesteValidaContinuaDependenteMaior18Estudante()
-        {
-
-        }
-
-        #endregion
-
-        #region TesteValidaContinuaDependenteMaior24Estudante
-        [TestMethod]
-
-        public void TesteValidaContinuaDependenteMaior24Estudante()
-        {
-
-        }
-
-        #endregion
-
 
         #region TesteValidaContaReceberAberto
         [TestMethod]
@@ -112,6 +61,65 @@ namespace SCF.Tests.Controllers
 
         #endregion
 
+        #region TesteValidaCPF
+        [TestMethod]
+        public void TesteValidaCPF()
+        {
+            bool esperado = true;
+
+            var conveniado = new Conveniado
+            {
+                CPF = "06442894657"
+            };
+
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
+
+            var teste = mock.ValidaCPF(conveniado.CPF);
+
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteConveniadoInativoComDebito
+        [TestMethod]
+
+        public void TesteConveniadoInativoComDebito()
+        {
+            
+        }
+
+        #endregion
+
+        #region TesteConveniadoInativos
+        [TestMethod]
+
+        public void TesteConveniadoInativo()
+        {
+
+        }
+
+        #endregion
+
+
+        #region TesteValidaContinuaDependenteMaior18Estudante
+        [TestMethod]
+
+        public void TesteValidaContinuaDependenteMaior18Estudante()
+        {
+
+        }
+
+        #endregion
+
+        #region TesteValidaContinuaDependenteMaior24Estudante
+        [TestMethod]
+
+        public void TesteValidaContinuaDependenteMaior24Estudante()
+        {
+
+        }
+
+        #endregion
 
         //[TestMethod]
         //public void Index()                                     
