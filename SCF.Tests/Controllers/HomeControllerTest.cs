@@ -21,161 +21,173 @@ namespace SCF.Tests.Controllers
         //private ConveniadoController mock;
         private SCFContext db = new SCFContext();
 
-        #region TesteValidaIdade
+        #region ContasReceber
+
+        #region TesteSomaValor500ValorPago50retorna450
         [TestMethod]
-
-        public void TesteValidaIdade()
+        public void TesteValor500ValorPago50()
         {
-
-        }
-
-        #endregion
-
-        #region TesteValidaContinuaDependenteMaior18NaoEstudante
-        [TestMethod]
-
-        public void TesteValidaContinuaDependenteMaior18NaoEstudante()
-        {
-
-        }
-
-        #endregion
-
-        #region TesteValidaContaReceberAberto
-        [TestMethod]
-
-        public void TesteValidaContaReceberAberto()
-        {
-
-        }
-
-        #endregion
-
-        #region TesteValidaContaReceberPago
-        [TestMethod]
-
-        public void TesteValidaContaReceberPago()
-        {
-
-        }
-
-        #endregion
-
-        #region TesteValidaCPF
-        [TestMethod]
-        public void TesteValidaCPF()
-        {
-            bool esperado = true;
-
-            var conveniado = new Conveniado
+            decimal esperado = 450;
+            var contasReceber = new ContasReceber
             {
-                CPF = "06442894657"
+                Valor = 500,
+                ValorPago = 50
             };
 
-            var mock = Substitute.ForPartsOf<ConveniadoController>();
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
 
-            var teste = mock.ValidaCPF(conveniado.CPF);
-
+            var teste = mock.CalculaValorPago(contasReceber.Valor, contasReceber.ValorPago);
             Assert.AreEqual(esperado, teste);
         }
         #endregion
 
-        #region TesteConveniadoInativoComDebito
+        #region TesteSomaValor500ValorPago500retorna0
         [TestMethod]
-
-        public void TesteConveniadoInativoComDebito()
+        public void TesteValor500ValorPago500()
         {
-            
-        }
-
-        #endregion
-
-        #region TesteConveniadoInativos
-        [TestMethod]
-
-        public void TesteConveniadoInativo()
-        {
-
-        }
-
-        #endregion
-
-
-        #region TesteValidaContinuaDependenteMaior18Estudante
-        [TestMethod]
-
-        public void TesteValidaContinuaDependenteMaior18Estudante()
-        {
-
-        }
-
-        #endregion
-
-        #region TesteValidaContinuaDependenteMaior24Estudante
-        [TestMethod]
-
-        public void TesteValidaContinuaDependenteMaior24Estudante()
-        {
-
-        }
-
-        #endregion
-
-        //[TestMethod]
-        //public void Index()                                     
-        //{
-
-        //    try
-        //    {
-        //        controller.Create(conveniado);
-        //        Assert.IsTrue(true);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Assert.IsTrue(false);
-        //    }
-        //}
-
-        [TestMethod]
-        public void ViewManterConveniado()
-        {
-            try { 
-            ConveniadoController index = new ConveniadoController();
-            ViewResult result = index.Index() as ViewResult;
-            Assert.IsNotNull(result);
-            }
-            catch(Exception ex)
+            decimal esperado = 0;
+            var contasReceber = new ContasReceber
             {
-                ConveniadoController index = new ConveniadoController();
-                ViewResult result = index.Index() as ViewResult;
-                Assert.IsNull(result);
-            }
+                Valor = 500,
+                ValorPago = 500
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.CalculaValorPago(contasReceber.Valor, contasReceber.ValorPago);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteValorMenorQueValorPago
+        [TestMethod]
+        public void TesteValorMenorQueValorPago()
+        {
+            decimal esperado = 0;
+            var contasReceber = new ContasReceber
+            {
+                Valor = 500,
+                ValorPago = 700
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.CalculaValorPago(contasReceber.Valor, contasReceber.ValorPago);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteSomaValor500Desconto50retorna450
+        [TestMethod]
+        public void TesteSomaValor500Desconto50retorna450()
+        {
+            decimal esperado = 450;
+            var contasReceber = new ContasReceber
+            {
+                Valor = 500,
+                Desconto = 50
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.CalculaValorcomDesconto(contasReceber.Valor, contasReceber.Desconto);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteValorMenorQueDesconto
+        [TestMethod]
+        public void TesteValorMenorQueDesconto()
+        {
+            decimal esperado = 500;
+            var contasReceber = new ContasReceber
+            {
+                Valor = 500,
+                Desconto = 700
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.CalculaValorcomDesconto(contasReceber.Valor, contasReceber.Desconto);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteDesdobramentoValor1200Desdobramento12retorna100
+        [TestMethod]
+        public void TesteDesdobramentoValor1200Desdobramento12()
+        {
+            decimal esperado = 100;
+            var contasReceber = new ContasReceber
+            {
+                Valor = 1200
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.CalculaDesdobramento(contasReceber.Valor);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteValidaSituacaoContasReceberAbertoRetornaAberto
+        [TestMethod]
+
+        public void TesteValidaContasReceberEmAberto()
+        {
+            string esperado = "A";
+
+            var contasReceber = new ContasReceber
+            {
+                SituacaoContasReceber = 1
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.SituacaoPagamento(contasReceber.SituacaoContasReceber);
+            Assert.AreEqual(esperado, teste);
         }
 
-        //[TestMethod]
-        //public void About()
-        //{
-        //    // Arrange
-        //    HomeController controller = new HomeController();
+        #endregion
 
-        //    // Act
-        //    ViewResult result = controller.About() as ViewResult;
+        #region TesteValidaSituacaoContaReceberPagoRetornaFechado
+        [TestMethod]
 
-        //    // Assert
-        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        //}
+        public void TesteValidaContaReceberPago()
+        {
+            string esperado = "F";
 
-        //[TestMethod]
-        //public void Contact()
-        //{
-        //    // Arrange
-        //    HomeController controller = new HomeController();
+            var contasReceber = new ContasReceber
+            {
+                SituacaoContasReceber = 2
+            };
 
-        //    // Act
-        //    ViewResult result = controller.Contact() as ViewResult;
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
 
-        //    // Assert
-        //    Assert.IsNotNull(result);
-        //}
+            var teste = mock.SituacaoPagamento(contasReceber.SituacaoContasReceber);
+            Assert.AreEqual(esperado, teste);
+        }
+
+        #endregion
+
+        #region TesteSituacaoContaReceberPagoRetornaInvalido
+        [TestMethod]
+        public void TesteContaReceberSituacaoPagamentoInvalida()
+        {
+            string esperado = "Invalido";
+
+            var contasReceber = new ContasReceber
+            {
+                SituacaoContasReceber = 3
+            };
+
+            var mock = Substitute.ForPartsOf<ContasReceberController>();
+
+            var teste = mock.SituacaoPagamento(contasReceber.SituacaoContasReceber);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #endregion
     }
 }

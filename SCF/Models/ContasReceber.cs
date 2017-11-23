@@ -14,7 +14,11 @@ namespace SCF.Models
         public DateTime DataVencimento { get; set;}
         public decimal ValorPago { get; set;}
         public DateTime DataPagamento { get; set; }
+        public int Juros { get; set; }
+        public decimal Desconto { get; set; }
 
+        //1 - Aberto 2 - Fechado
+        public int SituacaoContasReceber { get; set; }
 
     }
 }

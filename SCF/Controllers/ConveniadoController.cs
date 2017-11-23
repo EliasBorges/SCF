@@ -17,7 +17,7 @@ namespace SCF.Controllers
     {
         private SCFContext db = new SCFContext();
 
-        #region Métodos
+        #region Metodos
         // GET: Conveniado
         public ActionResult Index()
         {
@@ -151,11 +151,9 @@ namespace SCF.Controllers
             }
             base.Dispose(disposing);
         }
-
         #endregion
-        
-        #region Validações
 
+        #region Regras de Negocio
         public bool ValidaCPF(string vrCPF)
         {
             string valor = vrCPF.Replace(".", "");

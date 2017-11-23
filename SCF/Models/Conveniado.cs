@@ -40,6 +40,8 @@ namespace SCF.Models
         //TODO: Criar entidade para Tipo de Conveniado (Titular e Dependente)
         public int TipoConveniado { get; set; }
 
+        public bool SituacaoConveniado { get; set; }
+
         public Conveniado()
         {
             DataAdmissao = DateTime.Now.Date;

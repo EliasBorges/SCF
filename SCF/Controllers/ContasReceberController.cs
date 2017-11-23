@@ -15,6 +15,7 @@ namespace SCF.Controllers
     {
         private SCFContext db = new SCFContext();
 
+        #region Métodos
         // GET: ContasReceber
         public ActionResult Index()
         {
@@ -124,5 +125,65 @@ namespace SCF.Controllers
             }
             base.Dispose(disposing);
         }
+        #endregion
+
+        #region Regras de Negocio
+        public decimal CalculaValorPago(decimal valor, decimal valorTotal)
+        {
+            decimal total;
+            if (valor < valorTotal)
+            {
+                //TODO: fazer tratamento para retornar string ou bool "false"
+                total = 0;
+                return total;
+            } else { 
+            total = valor - valorTotal;
+            return total;
+            }
+        }
+
+        public decimal CalculaDesdobramento(decimal valor)
+        {
+            //TODO:Trabalhar melhor o desdobramento
+            int desdobramento = 12;
+            decimal valorTotal;
+
+            valorTotal = valor / desdobramento;
+
+            return valorTotal;
+        }
+
+        public string SituacaoPagamento(int SituacaoContasReceber)
+        {
+            string resultado;
+            if (SituacaoContasReceber == 1)
+            {
+                resultado = "A"; //Aberto
+                return resultado;
+            }
+            if (SituacaoContasReceber == 2)
+            {
+                resultado = "F"; //Fechado
+                return resultado;
+            }
+            else
+            {
+                resultado = "Invalido";
+                return resultado;
+            }
+        }
+
+        public decimal CalculaValorcomDesconto(decimal valor, decimal desconto)
+        {
+            decimal total;
+            if (valor < desconto)
+            {
+                //TODO: fazer tratamento para retornar string ou bool "false"
+                return valor;
+            }
+            total = valor - desconto;
+            return total;
+        }
+        #endregion
     }
 }

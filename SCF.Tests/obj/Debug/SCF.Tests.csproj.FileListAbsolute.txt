@@ -155,3 +155,8 @@ C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\Microsoft.Web.Mvc.dll
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\SCF.dll.config
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\bwkbr\source\repos\SCF\SCF.Tests\bin\Debug\pt-br\System.Web.Optimization.resources.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\System.Web.Optimization.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\Microsoft.Web.Mvc.dll
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\SCF.dll.config
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\System.Web.Optimization.xml
+D:\Repositorio\Outros\SCF\SCF.Tests\bin\Debug\pt-br\System.Web.Optimization.resources.dll
