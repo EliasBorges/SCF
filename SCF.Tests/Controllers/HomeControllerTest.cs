@@ -189,5 +189,103 @@ namespace SCF.Tests.Controllers
         #endregion
 
         #endregion
+
+        #region Conveniado
+
+        #region TesteValidaCPF
+        [TestMethod]
+        public void TesteValidaCPF()
+        {
+            bool esperado = true;
+
+            var conveniado = new Conveniado
+            {
+                CPF = "06442894657"
+            };
+
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
+
+            var teste = mock.ValidaCPF(conveniado.CPF);
+
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteConveniadoSituacaoConveniadoAtivo
+        [TestMethod]
+        public void TesteConveniadoAtivo()
+        {
+            string esperado = "Ativo";
+            var conveniado = new Conveniado
+            {
+                SituacaoConveniado = true
+            };
+
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
+
+            var teste = mock.VerificarSituacaoConveniado(conveniado.SituacaoConveniado);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #region TesteConveniadoSituacaoConveniadoInativo
+        [TestMethod]
+        public void TesteConveniadoInativo()
+        {
+            string esperado = "Inativo";
+            var conveniado = new Conveniado
+            {
+                SituacaoConveniado = false
+            };
+
+            var mock = Substitute.ForPartsOf<ConveniadoController>();
+
+            var teste = mock.VerificarSituacaoConveniado(conveniado.SituacaoConveniado);
+            Assert.AreEqual(esperado, teste);
+        }
+        #endregion
+
+        #endregion
+
+        #region View
+        [TestMethod]
+        public void ViewDeVisualizarConveniado()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Contact() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void ViewDeCriarConveniado()
+        {
+            // Arrange
+            ConveniadoController controllerConveniado = new ConveniadoController();
+
+            // Act
+            ViewResult result = controllerConveniado.Create() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void ViewDeCriarContasReceber()
+        {
+            // Arrange
+            ContasReceberController controllerContasReceber = new ContasReceberController();
+
+            // Act
+            ViewResult result = controllerContasReceber.Create() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+        #endregion
     }
 }

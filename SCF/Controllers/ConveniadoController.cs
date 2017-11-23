@@ -204,6 +204,22 @@ namespace SCF.Controllers
 
             return true;
         }
+
+        public string VerificarSituacaoConveniado(bool situacaoConveniado)
+        {
+            string resultado;
+
+            if (situacaoConveniado == true)
+            {
+                resultado = "Ativo";
+                return resultado;
+            }
+            else
+            {
+                resultado = "Inativo";
+                return resultado;
+            }
+        }
         #endregion
     }
 }
