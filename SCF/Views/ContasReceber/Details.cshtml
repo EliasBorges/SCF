@@ -1,14 +1,12 @@
 ﻿@model SCF.Models.ContasReceber
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Visualizar Conta a Receber";
     Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
 }
 
-<h2>Details</h2>
-
 <div>
-    <h4>ContasReceber</h4>
+    <H3>Visualizar Conta a Receber</H3>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -62,6 +60,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ContasReceberId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ContasReceberId }) |
+    @Html.ActionLink("Voltar", "Index")
 </p>

@@ -1,64 +1,86 @@
 ﻿@model IEnumerable<SCF.Models.ContasReceber>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Visualizar Contas a Receber";
     Layout = "~/Views/Shared/_BootstrapLayout.basic.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-4">
+                <h3>Visualizar Contas a Receber</h3>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4" style="padding-top: 18px">
+                @Html.ActionLink("Nova Conta Receber", "Create", null, new { @class = "btn btn-primary pull-right" })
+            </div>
+        </div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Desdobramento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ConveniadoId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Valor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataVencimento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ValorPago)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataPagamento)
-        </th>
-        <th></th>
-    </tr>
+    <div class="table-responsive" style="margin-top: 20px;">
+        <table id="tabelaContaReceber" class="table table-hover table-condensed">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desdobramento)
+                </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Desdobramento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ConveniadoId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Valor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataVencimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorPago)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataPagamento)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ContasReceberId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ContasReceberId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ContasReceberId })
-        </td>
-    </tr>
-}
+                <th>
+                    @Html.DisplayNameFor(model => model.ConveniadoId)
+                </th>
 
-</table>
+                <th>
+                    @Html.DisplayNameFor(model => model.Valor)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DataVencimento)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorPago)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DataPagamento)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Desdobramento)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConveniadoId)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataVencimento)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorPago)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataPagamento)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.ContasReceberId }, new { @class = "btn btn-success btn-sm" })
+                        @Html.ActionLink("Visualizar", "Details", new { id = item.ContasReceberId }, new { @class = "btn btn-info btn-sm" })
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.ContasReceberId }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -46,7 +46,7 @@
         <div class="form-group">
             <div class="col-md-4">
                 @Html.LabelFor(model => model.CPF, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @id = "conveniado-CPF", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CPF, "", new { @class = "text-danger" })
             </div>
 
@@ -64,7 +64,7 @@
 
             <div class="col-md-2">
                 @Html.LabelFor(model => model.TelResidencial, htmlAttributes: new { @class = "control-label col-md-0" })
-                @Html.EditorFor(model => model.TelResidencial, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TelResidencial, new { htmlAttributes = new { @id = "conveniado-telResidencial1", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TelResidencial, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -175,6 +175,15 @@
                 element.mask("(99) 9999-9999?9", { autoclear: false });
             }
         }).trigger('focusout');
+
+        $('#conveniado-CPF').focusout(function () {
+            var cpf, element;
+            element = $(this);
+            element.unmask();
+            cpf = element.val().replace(/\D/g, '');
+
+            element.mask('999.999.999-99', { autoclear: false });
+        });
 
     </script>
 }

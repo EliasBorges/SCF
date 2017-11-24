@@ -1,4 +1,4 @@
-# SCF
+﻿# SCF
 
 #### Motivação
 
@@ -11,9 +11,9 @@ Sistema visa automatizar e controlar uma funerária, aumentar o gerenciamento fi
 
  *  Ferramentas
 
-Visual Studio, GitHub, Selenium
+Visual Studio, GitHub, xUnity, SQL Server 2012
 
 #### Cronograma
 
  *  Dia 30/10 - Cadastro de conveniados - Cadastro de conveniados - Nesta tela será feito a inserção de dados dos conveniados, permitindo o cliente cadastrar um conveniado.
- *  Dia 27/11 - Cadastro financeiros - Nesta entrega iremos disponibilizar ao usuário telas para controle financeiro
+ *  Dia 27/11 - Cadastro financeiros - Nesta entrega iremos disponibilizar ao usuário telas para controle financeiro (Contas Receber)
